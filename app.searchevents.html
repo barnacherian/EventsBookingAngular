@@ -1,0 +1,30 @@
+<div align="center">
+
+<table>
+<tr>
+<td>Search event by name</td>
+<td><input type="text" name="eventsearch" [(ngModel)]="eventsearch"/></td>
+<td><input type="submit" value="search event" (click)="searchEvent()"/></td>
+</tr>
+<br/>
+
+<tr *ngIf="events">
+<td>Event id</td>
+<td>Event name</td>
+<td>Event date</td>
+<td>Event city</td>
+</tr>
+
+<ng-container *ngFor="let event of events;let i=index">
+<tr *ngIf="events!=null">
+<td>{{event.id}}</td>
+<td>{{event.eventname}}</td>
+<td>{{event.date}}</td>
+<td>{{event.city}}</td>
+</tr>
+</ng-container>
+
+</table>
+
+
+</div>

@@ -1,0 +1,26 @@
+<div align="center">
+<table border="1">
+<tr>
+<td>Id</td>
+<td>Name</td> 
+<td>Building</td>
+<td>Street</td>
+<td>City</td>
+</tr>
+
+
+<ng-container *ngFor="let dels of del;">
+<tr *ngIf="del!=null">
+
+<td>{{dels.id}}</td>
+<td>{{dels.name|uppercase}}</td>
+<td>{{dels.address.building}}</td>
+<td>{{dels.address.street}}</td>
+<td>{{dels.address.city|uppercase}}</td>
+</tr>
+
+</ng-container>
+
+</table>
+
+</div>

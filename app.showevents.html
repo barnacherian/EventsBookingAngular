@@ -1,0 +1,22 @@
+<div align="center">
+<table border="1">
+
+<tr>
+<td>Id</td>
+<td>Event Name</td>
+<td>Date</td>
+<td>City</td>
+</tr>
+
+
+<ng-container *ngFor="let event of events;">
+    <tr *ngIf="events!=null">
+        <td>{{event.id}}</td>
+        <td>{{event.eventname|uppercase}}</td>
+        <td>{{event.date}}</td>
+        <td>{{event.city}}</td>
+    </tr>
+
+</ng-container>
+</table>
+</div>
